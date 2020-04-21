@@ -7,17 +7,17 @@ public class Product {
     public float price;
 
     // Product constructors
+    public Product(String name, float price)
+    {
+        this.name = name;
+        this.price = price;
+    }
+    
     public Product(TableRow tr){
         this(
             tr.getString("Name"),
             tr.getFloat("Price")
         );
-    }
-
-    public Product(String name, float price)
-    {
-        this.name = name;
-        this.price = price;
     }
 
     // getter and setter methods

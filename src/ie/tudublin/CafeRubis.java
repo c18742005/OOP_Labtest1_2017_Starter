@@ -9,6 +9,7 @@ import processing.data.TableRow;
 public class CafeRubis extends PApplet {
     // Name : Steven Aherne
     // Student Num: C18742005
+
     // ArrayLists to store products and bill
     private ArrayList<Product> products = new ArrayList<Product>();
     private ArrayList<Product> bill = new ArrayList<Product>();
@@ -59,6 +60,7 @@ public class CafeRubis extends PApplet {
             rect(left, y, w, h);
             fill(0);
             textAlign(LEFT, CENTER);
+            textSize(15);
             text(product.getName(), left + 10, y + (h / 2));
             textAlign(RIGHT, CENTER);
             text(nf(product.getPrice(), 0, 2), left + w - 10, y + (h / 2));
@@ -119,7 +121,11 @@ public class CafeRubis extends PApplet {
 	}
 
 	public void draw()
-	{			
+	{	
+        textAlign(CENTER, CENTER);
+        textSize(30);
+        fill(0);
+        text("Cafe Rubis Till System", width/2, height - 580);		
         displayProducts();
         displayBill();
 	}
